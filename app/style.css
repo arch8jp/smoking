@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+h1,h2,p,span{
+    margin:0;
+    padding: 0;
+    color: #FFF;
+}
+
+header h1{
+    font-size: 6ex;
+    margin-bottom:20px; 
+
+}
+body{
+    background-image: url("./images/back.png");
+}
+
+.container{
+    width: 768px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.red{
+    color: red;
+}
+.brown{
+    color: #FFA07A;
+}

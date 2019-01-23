@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html ; charset='utf-8'">
+    <title>サンプル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="brown">●喫煙所</span>案内サイト<span class="red">●</span></h1>
+        </div>
+    </header>
+    <div role="main">
+        <div class="container">
+                <h1>松江駅周辺</h1>
+                <h2>緯度：34.80957437328034</h2>
+                <h2>経度：133.32966069999998</h2>
+            
+                <form method="POST" action="">
+                    <span>現在地を入力して下さい⇒</span>
+                    <input type="text" name="msg">
+                    <input type="submit" value="検索">
+                </form>
+        
+                <div>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1nfJ4qICIxHyiVMtdFl2Un8iSBXtCVT2I&ll=34.80957437328034,133.32966069999998&z=18" width="640" height="480"></iframe>
+                </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="https://twitter.com/intent/tweet?screen_name=arch8jp&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @arch8jp</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>&copy;2018 喫煙所紹介サイト</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
