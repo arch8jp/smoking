@@ -5,7 +5,8 @@ const url = require("url");
 const ejs = require("ejs");
 const qs = require("querystring");
 
-const index_page = fs.readFileSync("./index.ejs", "utf8");
+// const index_page = fs.readFileSync("./index.ejs", "utf8");
+const index_page = fs.readFileSync("./google2011b1b05bd80296.html", "utf8");
 const normalize_css = fs.readFileSync('./public/stylesheet/normalize.css', "utf8");
 const style_css = fs.readFileSync('./public/stylesheet/style.css', "utf8");
 
@@ -97,17 +98,19 @@ function response_index(request, response) {
 }
 
 function write_index(request, response, lat, lng, word) {
-  var content = ejs.render(index_page, {
-    content: word,
-    content1: lat,
-    content2: lng,
-    content3:
-      "https://www.google.com/maps/d/embed?mid=1nfJ4qICIxHyiVMtdFl2Un8iSBXtCVT2I&ll=" +
-      lat +
-      "," +
-      lng +
-      "&z=18"
-  });
+  var content = ejs.render(index_page
+  //   , {
+  //   content: word,
+  //   content1: lat,
+  //   content2: lng,
+  //   content3:
+  //     "https://www.google.com/maps/d/embed?mid=1nfJ4qICIxHyiVMtdFl2Un8iSBXtCVT2I&ll=" +
+  //     lat +
+  //     "," +
+  //     lng +
+  //     "&z=18"
+  // }
+  );
   response.writeHead(200, { "Content-Type": "text/html" });
   response.write(content);
   response.end();
