@@ -19,7 +19,7 @@ h1,h2,p,span{
 }
 /*文字色*/
 .brown{
-    color: #FFA07A;
+    color: #FF9966;
 }
 .green{
     color: green;
@@ -63,6 +63,18 @@ main .container{
     background-image: url("./images/back_mob.png");
     background-size:100%;
 }
+
+/*ボタンデザイン*/
+input#submit_button {
+    background: #FF9966;
+    border: solid 2px rgba(12, 12, 12, 0.6);
+    color:black;
+}
+
+input#submit_button:hover{
+    opacity: 0.6;
+}
+    
 
 /*フッター*/
 footer{
