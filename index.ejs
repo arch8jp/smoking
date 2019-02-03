@@ -29,10 +29,12 @@
                     <p>当サイトご利用いただきありがとうございます。</p>
                     <p>このサイトは現在地から付近の喫煙所を紹介するサイトでございます。</p>
                     <p>２０１９年１月にできた<span class="green">arch8</span>グループの協力のもと作成いたしました。</p>
-                    <p>今後のアップデートの内容は、現在地自動取得、ラインボットに移植を考えております。</p>
+                    <p>今後のアップデートの内容は、現在地自動取得を考えております。</p>
                 </div>
 
             </div>
+
+
             <div class="latlng black_background">
                 <h1>
                     <span class="brown">
@@ -46,21 +48,33 @@
                 <form method="POST" action="">
                     <span>現在地を入力して下さい⇒</span>
                     <input type="text" name="msg" style="color:#000;">
-                    <input id="submit_button" type="submit" value="検索" >
+                    <input id="submit_button" type="submit" value="検索">
                 </form>
 
             </div>
 
 
             <div class="iframe black_background">
-                <iframe src=<%=content3%> ></iframe>
+                <iframe src=<%=content3%>></iframe>
             </div>
+
+            <div class="line-bot-description black_background">
+                <p>2月3日更新</p>
+                <p>ラインボット製作しました！</p>
+                <p>位置情報を送信してもらうだけで付近の喫煙所を紹介してくれます。</p>
+
+            </div>
+            <div class="black_background">
+                <img src="http://qr-official.line.me/L/zVTva0YhXD.png">
+            </div>
+
 
             <div class="black_background">
                 <p><span class="green">arch8</span>では初心者のプログラマーから、<br>社会で活動されている方まで楽しく参加させて頂いております。。</p>
                 <p>「プログラムを勉強し始めたから、動くものを作ってみたいな、、」など制作意欲がある方<br>ならどなたでも募集しております。私もプログラム初心者ですのでご安心ください。</p>
-                <p>気になられたかたこちらの方にご質問ください！<a href="https://twitter.com/intent/tweet?screen_name=arch8jp&ref_src=twsrc%5Etfw" class="twitter-mention-button"
-                    data-show-count="false">Tweet to @arch8jp</a></p>
+                <p>気になられたかたこちらの方にご質問ください！<a
+                        href="https://twitter.com/intent/tweet?screen_name=arch8jp&ref_src=twsrc%5Etfw"
+                        class="twitter-mention-button" data-show-count="false">Tweet to @arch8jp</a></p>
 
             </div>
         </div>
@@ -69,7 +83,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                
+
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <p>&copy;2019 喫煙所紹介サイト</p>
             </div>
