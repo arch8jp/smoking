@@ -9,35 +9,24 @@
     <title>喫煙所紹介サイト</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
             <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
-            <div class="nav">
-                <ul>
+            <nav>
+                <ul class="navbar">
                     <li><a href="/">ホーム</a></li>
                     <li><a href="/line_bot/index.ejs">Line Bot</a></li>
                     <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
-
     <main>
         <div class="container black_background">
-            <div class="header">
-                <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
-                <div class="nav">
-                    <ul>
-                        <li><a href="/">ホーム</a></li>
-                        <li><a href="/line_bot/index.ejs">Line Bot</a></li>
-                        <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
-                    </ul>
-                </div>
-            </div>
-
 
             <div class="description">
                 <div class="black_background">
@@ -47,10 +36,7 @@
                     <p>２０１９年１月に結成された<span class="green">arch8.jp</span>グループの協力のもと作成いたしました。</p>
                 </div>
 
-
-                <iframe src="/newdata/index.html" class="newdata">
-                </iframe>
-
+                <iframe src="/newdata/index.html" class="newdata"></iframe>
             </div>
 
             <div class="latlng black_background">
@@ -64,16 +50,13 @@
                         <input id="submit_button" type="submit" value="検索"></p>
                 </form>
 
-
-                <button onclick="CurrentPosition()" class="pin_btn"><img src="/images/pin.png" class="icon_img">現在地自動取得</button>
-
+                <button onclick="CurrentPosition()" class="pin_btn"><img src="/images/pin.png"
+                        class="icon_img">現在地自動取得</button>
             </div>
 
             <div class="iframe black_background">
                 <iframe src=<%=content3%>></iframe>
             </div>
-
-
 
             <div class="black_background">
                 <p><span class="green">arch8.jp</span>では初心者のプログラマーから、<br>社会で活動されている方まで楽しく参加させて頂いております。。</p>
@@ -94,6 +77,9 @@
         </div>
     </footer>
 
+    <!-- 浮いてるコンテンツ -->
+    <div id="mobile-menu"></div>
+    <div id="btn">TOP</div>
     <script src="script.js"></script>
 </body>
 

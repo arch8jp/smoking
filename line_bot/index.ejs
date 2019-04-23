@@ -9,41 +9,62 @@
     <title>喫煙所紹介サイト</title>
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
             <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
-            <div class="nav">
-                <ul>
+            <nav>
+                <ul class="navbar">
                     <li><a href="/">ホーム</a></li>
                     <li><a href="/line_bot/index.ejs">Line Bot</a></li>
                     <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 
     <main>
         <div class="container black_background">
-            <div class="header">
-                <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
-                <div class="nav">
-                    <ul>
-                        <li><a href="/">ホーム</a></li>
-                        <li><a href="/line_bot/index.ejs">Line Bot</a></li>
-                        <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="line-bot-description black_background">
-                    <p>位置情報を送信してもらうだけで付近の喫煙所を紹介してくれます。</p>
+                    <p>位置情報を送信してもらうだけで付近の喫煙所を紹介してくれます。<br>
+                    ※現在ラインボットは動作していません。</p>
             </div>
 
             <div class="black_background">
                 <img src="http://qr-official.line.me/L/zVTva0YhXD.png">
+                <p>こちらのQRコードから、友達登録をしてください。</p>
             </div>
+
+
+            <div class="black_background">
+                <img src="/images/bot1.png">
+                <p>トーク画面の十字ボタンをタップしてください。</p>
+            </div>
+
+            <div class="black_background">
+                <img src="/images/bot2.png">
+                <p>次に、位置情報のピンのボタンをタップしてください。</p>
+            </div>
+
+            <div class="black_background">
+                <img src="/images/bot3.png">
+                <p>現在地の住所が表示されるので、そちらをタップしてください。</p>
+            </div>
+
+            <div class="black_background">
+                <img src="/images/bot4.png">
+                <p>グーグルマップのURLが送信されますので、タップしてください。</p>
+            </div>
+
+            <div class="black_background">
+                <img src="/images/bot5.png">
+                <p>付近の喫煙所が表示されます。</p>
+            </div>
+
+
         </div>
     </main>
 
@@ -56,7 +77,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="mobile-menu"></div>
+    <div id="btn">TOP</div>
+    <script src="../script.js"></script>
 </body>
 
 </html>

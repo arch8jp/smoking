@@ -113,6 +113,30 @@ function getFormClient(request, response) {
       response.writeHead(200, { "Content-Type": "text/png" });
       response.end(fs.readFileSync("./public/images/pin.png"));
 
+    case "/images/moba-munu.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/moba-menu.png"));
+
+    case "/images/bot1.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/bot1.PNG"));
+
+    case "/images/bot2.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/bot2.PNG"));
+
+    case "/images/bot3.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/bot3.PNG"));
+
+    case "/images/bot4.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/bot4.PNG"));
+
+    case "/images/bot5.png":
+      response.writeHead(200, { "Content-Type": "text/png" });
+      response.end(fs.readFileSync("./public/images/bot5.PNG"));
+
     default:
       response.writeHead(200, { "Content-Type": "text/plian" });
       response.end("no  page...");
