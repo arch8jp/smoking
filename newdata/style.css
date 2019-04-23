@@ -1,0 +1,26 @@
+@charset "utf-8";
+body{
+    background: white;
+
+}
+
+h2{
+    background: green;
+
+    color: white;
+}
+
+.topics dl {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+    
+.topics dt {padding-bottom: 5px;}
+
+.topics dd {margin-left: 0;}
+    
+    @media screen and (min-width: 500px) {
+        .topics dl {display: flex;}
+        .topics dd {margin-left: 11%;}
+    }

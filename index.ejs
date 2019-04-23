@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html ; charset='utf-8'">
     <meta name="description" content="このサイトは現在地から付近の喫煙所を紹介するサイトでございます。" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="google-site-verification" content="uCR-iniAilubUK-tZtf2Nu0QHdPfWlFFFlj35oBdkbE" />
     <title>喫煙所紹介サイト</title>
     <link rel="stylesheet" href="normalize.css">
@@ -15,81 +15,86 @@
     <header>
         <div class="container">
             <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/line_bot/index.ejs">Line Bot</a></li>
+                    <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+
     <main>
-
-        <div class="container">
-            <div class="description">
-                <div class="left">
-                    <img src="/images/smoking.png" alt="喫煙所紹介画像">
+        <div class="container black_background">
+            <div class="header">
+                <h1><span class="brown">喫煙所</span>紹介サイト💨</h1>
+                <div class="nav">
+                    <ul>
+                        <li><a href="/">ホーム</a></li>
+                        <li><a href="/line_bot/index.ejs">Line Bot</a></li>
+                        <li><a href="https://oneokrock256.github.io/">arch8.jpについて</a></li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="right black_background">
+
+            <div class="description">
+                <div class="black_background">
+                    <img src="/images/smoking.png" alt="喫煙所紹介画像">
                     <p>当サイトご利用いただきありがとうございます。</p>
                     <p>このサイトは現在地から付近の喫煙所を紹介するサイトでございます。</p>
-                    <p>２０１９年１月にできた<span class="green">arch8</span>グループの協力のもと作成いたしました。</p>
-                    <p>今後のアップデートの内容は、現在地自動取得を考えております。</p>
+                    <p>２０１９年１月に結成された<span class="green">arch8.jp</span>グループの協力のもと作成いたしました。</p>
                 </div>
 
-            </div>
 
+                <iframe src="/newdata/index.html" class="newdata">
+                </iframe>
+
+            </div>
 
             <div class="latlng black_background">
-                <h1>
-                    <span class="brown">
-                        <%= content%></span>の位置情報</h1>
-                <h2>緯度：
-                    <%= content1%>
-                </h2>
-                <h2>経度：
-                    <%= content2%>
-                </h2>
+                <h1>　<span class="brown"><%= content%></span><%= content4%>　</h1>
+                <h2>　緯度：<%= content1%>　</h2>
+                <h2>　経度：<%= content2%>　</h2>
+
                 <form method="POST" action="">
-                    <span>現在地を入力して下さい⇒</span>
-                    <input type="text" name="msg" style="color:#000;">
-                    <input id="submit_button" type="submit" value="検索">
+                    <p><span>調べたい地名を入力して下さい⇒</span>
+                        <input id="textbox" type="text" name="msg" style="color:#000;">
+                        <input id="submit_button" type="submit" value="検索"></p>
                 </form>
 
-            </div>
 
+                <button onclick="CurrentPosition()" class="pin_btn"><img src="/images/pin.png" class="icon_img">現在地自動取得</button>
+
+            </div>
 
             <div class="iframe black_background">
                 <iframe src=<%=content3%>></iframe>
             </div>
 
-            <div class="line-bot-description black_background">
-                <p>2月3日更新</p>
-                <p>ラインボット製作しました！</p>
-                <p>位置情報を送信してもらうだけで付近の喫煙所を紹介してくれます。</p>
-
-            </div>
-            <div class="black_background">
-                <img src="http://qr-official.line.me/L/zVTva0YhXD.png">
-            </div>
 
 
             <div class="black_background">
-                <p><span class="green">arch8</span>では初心者のプログラマーから、<br>社会で活動されている方まで楽しく参加させて頂いております。。</p>
+                <p><span class="green">arch8.jp</span>では初心者のプログラマーから、<br>社会で活動されている方まで楽しく参加させて頂いております。。</p>
                 <p>「プログラムを勉強し始めたから、動くものを作ってみたいな、、」など制作意欲がある方<br>ならどなたでも募集しております。私もプログラム初心者ですのでご安心ください。</p>
                 <p>気になられたかたこちらの方にご質問ください！<a
                         href="https://twitter.com/intent/tweet?screen_name=arch8jp&ref_src=twsrc%5Etfw"
                         class="twitter-mention-button" data-show-count="false">Tweet to @arch8jp</a></p>
-
             </div>
         </div>
-
     </main>
+
     <footer>
         <div class="container">
             <div class="footer-content">
-
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <p>&copy;2019 喫煙所紹介サイト</p>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

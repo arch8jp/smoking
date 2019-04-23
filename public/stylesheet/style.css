@@ -1,15 +1,15 @@
 @charset "utf-8";
-*{
-    color: white;
-}
-body{
-    background: #0d0d0d;
-}
+/*-------------------------------------全体のCSS設定-------------------------------------*/
+
+*{color: white;}
+
+body{background: #0d0d0d;}
+
+
 h1,h2,p,span{
     margin:0;
     padding: 0;
 }
-
 
 .container{
     display: block;
@@ -17,39 +17,49 @@ h1,h2,p,span{
     margin:0 auto;
     text-align: center;
 }
-/*文字色*/
-.brown{
-    color: #FF9966;
-}
-.green{
-    color: green;
-}
 
-/*ヘッダ*/
-header h1{
-    font-size: 2em;
-     
-}
+a{text-decoration: none;}
 
-
-
-/*メイン*/
-.description{
-    margin-bottom: 100px;
-}
+/* .mini{ font-size: 90%;} */
+/*-------------------------------------文字色＆背景-------------------------------------*/
+.brown{ color: #FF9966;}
+.green{ color: green;}
 
 .black_background{
     background: rgba(12, 12, 12, 0.6);
     margin-bottom:20px;
 }
+
+.newdata{
+    width:400px;
+    height:100px;
+}
+
+.black_background p{line-height: 1.7;}
+
+
+
+
+/*-------------------------------------ヘッダ-------------------------------------*/
+header h1{
+    display: block;
+    font-size: 2em;
+}
+main .header{ display: none; }
+
+/*-------------------------------------ナビゲーション-------------------------------------*/
+
+.nav ul{ list-style-type: none; }
+.nav a:hover{ opacity: 0.5;}
+
+/*-------------------------------------メイン-------------------------------------*/
+.description{ margin: 50px 0;}
+
 .iframe iframe{
     width:320px;
     height:320px;
 }
-main p {
-    font-size: 0.9em;
-}
-
+main p {font-size: 0.9em;}
 
 .description img{
     widows: 150px;
@@ -65,42 +75,59 @@ main .container{
 }
 
 /*ボタンデザイン*/
+input#submit_button  , .pin_btn{
+    margin:10px 0;
+    color: #0d0d0d;
+}
+
 input#submit_button {
     background: #FF9966;
     border: solid 2px rgba(12, 12, 12, 0.6);
-    color:black;
+}
+ 
+.icon_img{
+    position: relative;
+    width:17px;
+    height: 20px;
+    top:5px;
+    left:0;
 }
 
-input#submit_button:hover{
-    opacity: 0.6;
-}
+input#submit_button:hover ,.pin_btn:hover{opacity: 0.7;}
     
 
-/*フッター*/
+/*-------------------------------------フッター-------------------------------------*/
 footer{
     background:#0d0d0d;
 }
 
+/*-------------------------------------768px 以上の時のデザイン-------------------------------------*/
+@media screen and ( min-width : 768px){
+    main .header{display: flex;}
 
-/*768px 以下*/
-@media screen and (min-width:768px){
-    header h1{
-        font-size:3em;
-    }
+    
+    main .header h1{width: 40%;}
+
+    main .header .nav{width: 60%;}
+
+    main .nav ul{ display: flex;}
+
+    main .nav li{ width: 35%;}
+
+    main .nav li:not(:last-child){border-right:1px solid rgba(256, 256 , 256, 0.5); }
+
+    main .nav li:first-child{width: 25% ; }
+
+    header .container{ display: none;}
 
     .description img{
         width:300px;
         height: 300px;
     }
 
-    main p {
-        font-size: 1.2em;
-    }
-
-    
-    .container{
-        width: 1500px;
-    }
+    main p {font-size: 1.2em;}
+   
+    .container{width: 100%;}
 
     .iframe iframe{
         width:640px;
@@ -110,6 +137,11 @@ footer{
     main .container{
         background-image: url("./images/back.png");
         background-size:100%;
+    }
+
+    .newdata{
+        width:600px;
+        height:150px;
     }
     
 }
