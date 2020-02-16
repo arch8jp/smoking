@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio-httpcli": "^0.7.3",
-    "ejs": "^2.6.1"
+    "cheerio-httpcli": "^0.7.4",
+    "ejs": "^3.0.1"
   }
 }
